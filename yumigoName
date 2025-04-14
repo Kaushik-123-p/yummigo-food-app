@@ -1,0 +1,40 @@
+
+Yummigo (Top Choice for Food Delivery App)
+
+Why: “Yummy” + “Go”. Food on the go, fast and delicious.
+
+Vibe: Fun, catchy, and great for a mobile-friendly app.
+
+Why: Very catchy, short, modern, and mobile-friendly.
+
+Feels like: Zomato / Swiggy level branding.
+
+Perfect if: You want an app-like name that sounds fun and professional.
+
+
+============================================================================================================================
+
+github
+
+…or create a new repository on the command line
+---------------------------------------------------------------------------------
+
+echo "# yummigo-food-app" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:Kaushik-123-p/yummigo-food-app.git
+git push -u origin main
+
+
+…or push an existing repository from the command line
+---------------------------------------------------------------------------------
+git remote add origin git@github.com:Kaushik-123-p/yummigo-food-app.git
+git branch -M main
+git push -u origin main
+
+
+==========================================================================================================================
+for icon
+https://www.flaticon.com/search?word=food&k=1744641040373&sign-up=google
