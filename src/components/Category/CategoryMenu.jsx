@@ -2,18 +2,30 @@ import React from 'react'
 
 const CategoryMenu = () => {
   return (
-    <div>
-      <div>
-        <h3 className='text-xl font-semibold'>Find the best food</h3>
+    <div className="px-4 py-6">
+      <div className="mb-4">
+        <h3 className="text-2xl font-bold text-gray-800">Find the best food</h3>
       </div>
-      <div className='my-5 flex gap-3 overflow-x-scroll lg:overflow-x-hidden scroll-smooth'>
-        <button className='px-3 py-2 bg-gray-200 font-bold rounded-lg hover:bg-green-500 hover:text-white'>All</button>
-        <button className='px-3 py-2 bg-gray-200 font-bold rounded-lg hover:bg-green-500 hover:text-white'>Breakfast</button>
-        <button className='px-3 py-2 bg-gray-200 font-bold rounded-lg hover:bg-green-500 hover:text-white'>Lunch</button>
-        <button className='px-3 py-2 bg-gray-200 font-bold rounded-lg hover:bg-green-500 hover:text-white'>Dinner</button>
-        <button className='px-3 py-2 bg-gray-200 font-bold rounded-lg hover:bg-green-500 hover:text-white'>Snakes</button>
+      <div className="flex gap-3 overflow-x-auto scroll-smooth pb-2 lg:overflow-x-visible">
+        <button className="whitespace-nowrap px-4 py-2 bg-gray-100 text-gray-700 font-semibold rounded-full transition duration-200 shadow-sm lg:hover:bg-green-500 lg:hover:text-white">
+          All
+        </button>
+        <button className="whitespace-nowrap px-4 py-2 bg-gray-100 text-gray-700 font-semibold rounded-full transition duration-200 shadow-sm lg:hover:bg-green-500 lg:hover:text-white">
+          Breakfast
+        </button>
+        <button className="whitespace-nowrap px-4 py-2 bg-gray-100 text-gray-700 font-semibold rounded-full transition duration-200 shadow-sm lg:hover:bg-green-500 lg:hover:text-white">
+          Lunch
+        </button>
+        <button className="whitespace-nowrap px-4 py-2 bg-gray-100 text-gray-700 font-semibold rounded-full transition duration-200 shadow-sm lg:hover:bg-green-500 lg:hover:text-white">
+          Dinner
+        </button>
+        <button className="whitespace-nowrap px-4 py-2 bg-gray-100 text-gray-700 font-semibold rounded-full transition duration-200 shadow-sm lg:hover:bg-green-500 lg:hover:text-white">
+          Snacks
+        </button>
       </div>
     </div>
+
+
   )
 }
 
