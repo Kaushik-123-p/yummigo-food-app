@@ -7,7 +7,7 @@ const FoodCard = ({ img, name, price, desc, rating }) => {
       <img
         src={img}
         alt="Onion Pizza"
-        className="m-auto h-[130px] rounded-md object-cover hover:scale-110 cursor-pointer transition-transform duration-500 ease-in-out"
+        className="m-auto h-[150px] rounded-md object-cover hover:scale-110 cursor-pointer transition-transform duration-500 ease-in-out"
       />
 
       <div className="text-sm flex justify-between items-center">
