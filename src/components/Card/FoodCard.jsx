@@ -14,12 +14,12 @@ const FoodCard = ({ id, img, name, price, desc, rating }) => {
         className="m-auto h-[150px] rounded-md object-cover hover:scale-110 cursor-pointer transition-transform duration-500 ease-in-out"
       />
 
-      <div className="text-sm flex justify-between items-center">
+      <div className="text-sm flex flex-col gap-2">
         <h2 className="text-lg font-semibold text-gray-800">{name}</h2>
         <span className="text-lg text-green-500 font-bold">₹{price}</span>
       </div>
 
-      <p className="text-sm text-gray-600 mt-2">
+      <p className="text-sm text-gray-600 ">
         {desc.slice(0, 60)}...
       </p>
 
@@ -29,7 +29,7 @@ const FoodCard = ({ id, img, name, price, desc, rating }) => {
         </span>
         <button
           onClick={() => {
-            dispatch(addToCart({ id, name, price, rating, qty: 1 }));
+            dispatch(addToCart({ id, img, name, price, rating, qty: 1 }));
           }}
           className="p-2 bg-green-500 text-white hover:bg-green-700 rounded-lg text-sm transition-colors duration-300">
           Add To Cart
