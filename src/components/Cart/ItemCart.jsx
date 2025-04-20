@@ -3,6 +3,7 @@ import { FaPlus, FaMinus } from "react-icons/fa6";
 import { MdDelete } from "react-icons/md";
 import { useDispatch } from 'react-redux';
 import { removeFromCart, incrementQty, decrementQty } from "../../slices/CartSlice"
+import toast, { Toaster } from 'react-hot-toast';
 
 const ItemCart = ({ id, img, name, price, qty }) => {
 
@@ -11,7 +12,12 @@ const ItemCart = ({ id, img, name, price, qty }) => {
   return (
     <div className='flex items-center gap-2 rounded-lg shadow-md p-2 mb-3 relative '>
       <MdDelete
-        onClick={() => dispatch(removeFromCart({ id, img, name, price, qty }))}
+        onClick={() => {
+          dispatch(removeFromCart({ id, img, name, price, qty }))
+          toast(`${name} Removed!`, {
+            icon: '👋',
+          });
+        }}
         className='absolute right-7 top-3 text-gray-600 cursor-pointer' />
       <img src={img} alt=""
         className='w-[50px] h-[50px]' />
@@ -22,11 +28,21 @@ const ItemCart = ({ id, img, name, price, qty }) => {
           <span className='text-green-500 font-bold'>₹{price}</span>
           <div className='flex items-center justify-between gap-2 absolute right-7'>
             <FaMinus
-              onClick={() => qty > 1 ? dispatch(decrementQty({ id })) : dispatch(removeFromCart({ id, img, name, price, qty }))}
+              onClick={() => {
+                qty > 1 ? dispatch(decrementQty({ id })) : dispatch(removeFromCart({ id, img, name, price, qty }))
+                toast(`${name} Removed!`, {
+                  icon: '👋',
+                });
+              }}
               className='border-2 border-gray-600 text-gray-600 hover:bg-green-500 hover:text-white hover:border-none rounded-md text-xl p-1 transition-all ease-linear cursor-pointer' />
             <span>{qty}</span>
             <FaPlus
-              onClick={() => dispatch(incrementQty({ id }))}
+              onClick={() => {
+                dispatch(incrementQty({ id }))
+                toast(`${name} Added!`, {
+                  icon: '🎉',
+                })
+              }}
               className='border-2 border-gray-600 text-gray-600 hover:bg-green-500 hover:text-white hover:border-none rounded-md text-xl p-1 transition-all ease-linear cursor-pointer' />
           </div>
         </div>
