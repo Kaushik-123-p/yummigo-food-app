@@ -2,7 +2,7 @@ import React from 'react'
 import { FaPlus, FaMinus } from "react-icons/fa6";
 import { MdDelete } from "react-icons/md";
 import { useDispatch } from 'react-redux';
-import { removeFromCart, incrementQty, decrementQty } from "../../slices/CartSlice"
+import { removeFromCart, incrementQty, decrementQty } from "../../redux/slices/CartSlice"
 import toast, { Toaster } from 'react-hot-toast';
 
 const ItemCart = ({ id, img, name, price, qty }) => {
