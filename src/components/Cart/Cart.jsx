@@ -58,7 +58,7 @@ const Cart = () => {
           <hr className='w-full my-2' />
           <button
             onClick={() => navigate("/success")}
-            className='bg-green-500 text-white font-bold px-3 py-2 rounded-lg w-full mb-2'>
+            className='bg-green-500 text-white font-bold px-3 py-2 rounded-lg w-full mb-2 cursor-pointer'>
             Checkout
           </button>
         </div>
