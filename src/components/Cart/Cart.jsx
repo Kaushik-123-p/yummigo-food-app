@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import ItemCart from './ItemCart';
 import { RiCloseFill } from "react-icons/ri";
 import { FaShoppingCart } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
 
@@ -17,6 +18,7 @@ const Cart = () => {
 
   const totalPrice = cartItems.reduce((totalPrice, item) => totalPrice + item.qty * item.price, 0)
 
+  const navigate = useNavigate()
 
   return (
     <>
@@ -54,7 +56,9 @@ const Cart = () => {
           <h3 className='font-semibold text-gray-800'>Items : {totalQty} </h3>
           <h3 className='font-semibold text-gray-800'>Total Amount : {totalPrice}</h3>
           <hr className='w-full my-2' />
-          <button className='bg-green-500 text-white font-bold px-3 py-2 rounded-lg w-full mb-2'>
+          <button
+            onClick={() => navigate("/success")}
+            className='bg-green-500 text-white font-bold px-3 py-2 rounded-lg w-full mb-2'>
             Checkout
           </button>
         </div>
