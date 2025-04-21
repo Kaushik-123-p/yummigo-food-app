@@ -3,11 +3,12 @@ import FoodCard from '../Card/FoodCard'
 import FoodData from '../../Data/FoodData.js'
 import toast, { Toaster } from 'react-hot-toast';
 import { useSelector } from 'react-redux';
-import { CgEditUnmask } from 'react-icons/cg';
+
 
 const FoodItems = () => {
 
   const category = useSelector((state) => state.category.category)
+  const search = useSelector((state) => state.search.search)
 
   const notify = (name) => toast.success(`Added ${name}`)
   return (
@@ -21,10 +22,10 @@ const FoodItems = () => {
         {
           FoodData.filter((food) => {
             if (category === "All") {
-              return food
+              return food.name.toLowerCase().includes(search.toLowerCase())
             }
             else {
-              return category === food.category
+              return category === food.category && food.name.toLowerCase().includes(search.toLowerCase())
             }
           }).map((food) => (
             <FoodCard
